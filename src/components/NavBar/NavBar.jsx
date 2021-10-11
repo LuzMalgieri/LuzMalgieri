@@ -1,7 +1,8 @@
 import React from "react";
-import "../styles/NavBar.css";
+import "../../attributes/styles/NavBar.css";
+import MainLogo from "../../attributes/img/logo-store.png";
 import { menu } from "../utiles/helpers";
-import MainLogo from "../img/logo-store.png";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
@@ -19,6 +20,7 @@ const NavBar = () => {
             </li>
           );
         })}
+        <CartWidget />
         <li className="toggle">
           <span className="bars"></span>
         </li>
@@ -28,4 +30,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
