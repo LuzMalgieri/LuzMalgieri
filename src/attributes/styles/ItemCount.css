@@ -1,0 +1,39 @@
+.itemCountContainer {
+  font-family: "Montserrat", sans-serif;
+  width: 20rem;
+  background-color: #f8defa;
+  margin: 1rem;
+}
+
+.addToCart {
+  position: relative;
+  outline: 0;
+  background-color: #8c0e96;
+  color: #fff;
+  border: none;
+  height: 2.5rem;
+  width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.lessItem,
+.plusItem {
+  background-color: #8c0e96;
+  color: #fff;
+  width: 2rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.valueItem {
+  text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+}
