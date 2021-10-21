@@ -1,29 +1,28 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../../components/ItemList/ItemList";
 import "../../attributes/styles/ItemListContainer.css";
-import catalogue from "../../attributes/products.json"
+import catalogue from "../../attributes/products.json";
 
 const ItemListContainer = (props) => {
+  // LOGICA PARA EL ITEM COUNTER
+  // const [counter, setCounter] = useState(initial);
 
-// LOGICA PARA EL ITEM COUNTER
-// const [counter, setCounter] = useState(initial);
+  //   const availableStock = () =>
+  //     stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
 
-//   const availableStock = () =>
-//     stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
+  //   const onAdd = () => {
+  //     if (counter < stock) {
+  //       setCounter(counter + 1);
+  //     }
+  //   };
 
-//   const onAdd = () => {
-//     if (counter < stock) {
-//       setCounter(counter + 1);
-//     }
-//   };
+  //   const onSubstract = () => {
+  //     if (counter > 1) {
+  //       setCounter(counter - 1);
+  //     }
+  //   };
 
-//   const onSubstract = () => {
-//     if (counter > 1) {
-//       setCounter(counter - 1);
-//     }
-//   };
-
-//LOGICA PARA EL MAPEO DE PRODUCTOS
+  //LOGICA PARA EL MAPEO DE PRODUCTOS
 
   const [products, setProducts] = useState([]);
 
@@ -43,7 +42,7 @@ const ItemListContainer = (props) => {
       .then((res) => setProducts(res))
       .catch((err) => console.log(err));
   }, []);
-  
+
   return (
     <div>
       <p>{props.greeting}</p>
@@ -52,8 +51,8 @@ const ItemListContainer = (props) => {
           ? products.map((product) => {
               return <ItemList items={product} />;
             })
-          : "Loading.." }
-          {console.log(products)}
+          : "Loading.."}
+        {console.log(products)}
       </section>
     </div>
   );
