@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../../attributes/styles/ItemCount.css";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial}) => {
   const [counter, setCounter] = useState(initial);
 
   const availableStock = () =>
-    stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
+ stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
 
   const onAdd = () => {
     if (counter < stock) {

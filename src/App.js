@@ -1,6 +1,7 @@
 import "./index.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemList from "./components/ItemList/ItemList"
 
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
     <div className="App">
       
         <NavBar />
-        <ItemListContainer greeting="Libros de Ficción" />
+        <ItemListContainer>
+          <ItemList />
+        </ItemListContainer>
       
     </div>
   );

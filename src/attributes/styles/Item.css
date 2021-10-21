@@ -1,0 +1,12 @@
+.prodCard {
+  width: 20rem;
+  min-height: 300px;
+  background-color: #f1faee;
+  padding: 1rem;
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.prodImg {
+  width: 10rem;
+}
