@@ -1,6 +1,6 @@
 import "./index.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./containers/ItemListContainer/ItemListContainer.jsx";
 import ItemList from "./components/ItemList/ItemList"
 
 

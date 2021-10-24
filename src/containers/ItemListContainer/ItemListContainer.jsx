@@ -5,18 +5,18 @@ import catalogue from "../../attributes/products.json";
 
 const ItemListContainer = (props) => {
   // LOGICA PARA EL ITEM COUNTER
-  // const [counter, setCounter] = useState(initial);
+  // //const [counter, setCounter] = useState();
 
-  //   const availableStock = () =>
+  //   const availableStock = (stock) =>
   //     stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
 
-  //   const onAdd = () => {
+  //   const onAdd = (stock,counter, setCounter) => {
   //     if (counter < stock) {
   //       setCounter(counter + 1);
   //     }
   //   };
 
-  //   const onSubstract = () => {
+  //   const onSubstract = (stockcounter, setCounter) => {
   //     if (counter > 1) {
   //       setCounter(counter - 1);
   //     }
@@ -47,12 +47,7 @@ const ItemListContainer = (props) => {
     <div>
       <p>{props.greeting}</p>
       <section className="itemListContainer">
-        {products.length
-          ? products.map((product) => {
-              return <ItemList items={product} />;
-            })
-          : "Loading.."}
-        {console.log(products)}
+        <ItemList items={products} />
       </section>
     </div>
   );

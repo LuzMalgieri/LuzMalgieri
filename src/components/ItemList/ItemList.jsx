@@ -3,14 +3,20 @@ import Item from "../Item/Item";
 
 const ItemList = ({ items }) => {
   return (
-    <Item
-      id={items.id}
-      title={items.title}
-      price={items.price}
-      pictureUrl={items.pictureUrl}
-      stock={items.stock}
-      initial={items.initial}
-    />
+    <>
+      {items.length
+        ? items.map((item) => (
+            <Item
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              pictureUrl={item.pictureUrl}
+              stock={item.stock}
+              initial={item.initial}
+            />
+          ))
+        : "Loading.."}
+    </>
   );
 };
 
