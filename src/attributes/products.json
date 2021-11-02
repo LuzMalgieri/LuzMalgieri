@@ -2,6 +2,7 @@
     {
         "id":1,
         "title":"The Poppy War",
+        "category":"fiction",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "price": 19.99,
         "pictureUrl":"https://2.bp.blogspot.com/-ydDzoZ1as_A/XBoQw1ZfiwI/AAAAAAAAWDY/1kYipmjqrisZ-pMVp6hkv1n1TKriHlocgCLcBGAs/s1600/PoppyWar.jpg",
@@ -11,6 +12,7 @@
     {
         "id":2,
         "title": "Beartown",
+        "category":"fiction",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "price": 12.50,
         "pictureUrl": "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B550%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781501160776_p0_v5%5D&call=url%5Bfile:common/decodeProduct.chain%5D",
@@ -20,6 +22,7 @@
     {
         "id":3,
         "title": "Everything I Never Told You",
+        "category":"fiction",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "price": 8.99,
         "pictureUrl": "https://images-na.ssl-images-amazon.com/images/I/51ut975A3RL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
@@ -29,6 +32,7 @@
     {
         "id":4,
         "title": "Misery",
+        "category":"fiction",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "price": 5.67,
         "pictureUrl":"http://prodimage.images-bn.com/pimages/9781501143106_p0_v2_s1200x630.jpg",
@@ -38,6 +42,7 @@
     {
         "id":5,
         "title": "Sapiens",
+        "category":"non-fiction",
         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "price": 19.50,
         "pictureUrl":"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1595674533i/23692271._UY2560_SS2560_.jpg",

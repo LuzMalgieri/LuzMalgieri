@@ -3,15 +3,16 @@ import "../../attributes/styles/NavBar.css";
 import MainLogo from "../../attributes/img/logo-store.png";
 import { menu } from "../utiles/helpers";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav>
       <ul className="menuBar">
         <li className="logo">
-          <a href="*">
+          <Link to={"/"}>
             <img src={MainLogo} alt="store" />
-          </a>
+            </Link>
         </li>
         {menu.map((item) => {
           return (

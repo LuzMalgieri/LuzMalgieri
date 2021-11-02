@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "../Item/Item";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, onAdd, onSubstract}) => {
   return (
     <>
       {items.length
@@ -13,6 +13,8 @@ const ItemList = ({ items }) => {
               pictureUrl={item.pictureUrl}
               stock={item.stock}
               initial={item.initial}
+              onAdd={onAdd}
+              onSubstract={onSubstract}
             />
           ))
         : "Loading.."}
