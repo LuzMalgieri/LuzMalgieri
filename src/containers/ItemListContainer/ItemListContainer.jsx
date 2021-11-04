@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "../../components/ItemList/ItemList";
-
+import { useParams } from "react-router-dom";
 import "../../attributes/styles/ItemListContainer.css";
 import catalogue from "../../attributes/products.json";
 
-
 const ItemListContainer = (props) => {
-  
-
   //LOGICA PARA EL MAPEO DE PRODUCTOS
-
+  const { id } = useParams();
   const [products, setProducts] = useState([]);
 
   const getProducts = (data) =>
@@ -25,9 +22,9 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
     getProducts(catalogue)
-      .then((res) => setProducts(res))
+      .then((res) => {id ? setProducts(res.filter((product) => product.category === id)) : setProducts(catalogue);})
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   return (
     <div>
