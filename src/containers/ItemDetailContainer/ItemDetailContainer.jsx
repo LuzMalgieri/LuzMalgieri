@@ -9,22 +9,11 @@ const ItemDetailContainer = (props) => {
   const productId = parseInt(id);
 
   // LOGICA PARA EL ITEM COUNTER
-  //   const [counter, setCounter] = useState();
+  // const [counter, setCounter] = useState();
 
-  //     const availableStock = (stock) =>
-  //       stock > 0 ? <p>Hay {stock} unidades disponibles.</p> : <p>No hay stock.</p>;
+  // const onAdd = (stock) => (counter < stock ? setCounter(counter + 1) : null);
 
-  //     const onAdd = (stock,counter, setCounter) => {
-  //       if (counter < stock) {
-  //         setCounter(counter + 1);
-  //       }
-  //     };
-
-  //     const onSubstract = (counter, setCounter) => {
-  //       if (counter > 1) {
-  //         setCounter(counter - 1);
-  //       }
-  //     };
+  // const onSubstract = (stock) => (counter > 1 ? setCounter(counter - 1) : null );
 
   //LOGICA PARA RENDERIZAR ITEM DETAIL
 
@@ -50,7 +39,7 @@ const ItemDetailContainer = (props) => {
       .catch((err) => console.log(err));
   }, [productId]);
 
-  return (<>{item ? <ItemDetail item={item} /> : "Loading.."}</>)
+  return <>{item ? <ItemDetail item={item} /> : "Loading.."}</>;
 };
 
 export default ItemDetailContainer;

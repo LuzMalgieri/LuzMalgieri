@@ -5,6 +5,12 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const menu = [
+    { name: "Fiction", ref: "/category/fiction" },
+    { name: "Non-Fiction", ref: "/category/non-fiction" },
+    { name: "FAQ", ref: "/" }
+  ];
+
   return (
     <nav>
       <ul className="menuBar">
@@ -13,16 +19,14 @@ const NavBar = () => {
             <img src={MainLogo} alt="store" />
           </Link>
         </li>
+        {menu.map((item) => {
+          return (
+            <li className="menuItem">
+              <Link to={"{item.ref}"}>{item.name}</Link>
+            </li>
+          );
+        })}
 
-        <li className="menuItem">
-          <Link to={"/category/fiction"}>Fiction</Link>
-        </li>
-        <li className="menuItem">
-          <Link to={"/category/non-fiction"}>Non-Fiction</Link>
-        </li>
-        <li className="menuItem">
-          <Link to={"/"}>FAQ</Link>
-        </li>
         <CartWidget />
         <li className="toggle">
           <span className="bars"></span>
