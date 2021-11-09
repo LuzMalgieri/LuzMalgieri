@@ -22,7 +22,7 @@ const NavBar = () => {
         {menu.map((item) => {
           return (
             <li className="menuItem">
-              <Link to={"{item.ref}"}>{item.name}</Link>
+              <Link to={item.ref}>{item.name}</Link>
             </li>
           );
         })}
