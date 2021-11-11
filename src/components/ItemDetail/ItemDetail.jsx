@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import "../../attributes/styles/ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import Cart from "../Cart/index"
+import Cart from "../Cart/index";
+import { useCart } from "../../context/CartContext";
 
 const ItemDetail = ({ item }) => {
   const [quantity, setQuantityState] = useState(0);
+  const { addItem, isInCart } = useCart();
 
   const quantityState = (addOn) => {
     setQuantityState(addOn);
-    // console.log(quantity);
+    addItem(item, addOn);
+   
   };
 
+  console.log(setQuantityState)
   return (
     <>
       <section className="detailBody">
@@ -26,13 +30,15 @@ const ItemDetail = ({ item }) => {
             <h1 className="itemDetailTitle">{item.title}</h1>
             <p className="itemDetailPrice">${item.price}</p>
             <p className="itemDetailDescription">{item.description}</p>
-            {quantity ? <Cart /> : 
+            {isInCart(item.id) ? (
+              <Cart />
+            ) : (
               <ItemCount
                 stock={item.stock}
                 initial={item.initial}
                 addToCart={quantityState}
               />
-            }
+            )}
           </div>
         </div>
       </section>

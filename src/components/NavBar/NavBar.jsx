@@ -8,7 +8,7 @@ const NavBar = () => {
   const menu = [
     { name: "Fiction", ref: "/category/fiction" },
     { name: "Non-Fiction", ref: "/category/non-fiction" },
-    { name: "FAQ", ref: "/" }
+    { name: "FAQ", ref: "/" },
   ];
 
   return (
