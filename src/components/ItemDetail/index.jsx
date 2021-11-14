@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../../attributes/styles/ItemDetail.css";
-import ItemCount from "../ItemCount/ItemCount";
-import Cart from "../Cart/index";
-import { useCart } from "../../context/CartContext";
+import ItemCount from "../ItemCount/index";
+import { useCart } from "../../context";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
   const [quantity, setQuantityState] = useState(0);
@@ -11,10 +11,8 @@ const ItemDetail = ({ item }) => {
   const quantityState = (addOn) => {
     setQuantityState(addOn);
     addItem(item, addOn);
-   
   };
 
-  console.log(setQuantityState)
   return (
     <>
       <section className="detailBody">
@@ -31,7 +29,9 @@ const ItemDetail = ({ item }) => {
             <p className="itemDetailPrice">${item.price}</p>
             <p className="itemDetailDescription">{item.description}</p>
             {isInCart(item.id) ? (
-              <Cart />
+              <Link to={"/cart"}>
+                <button className="addToCart">TO CHECKOUT</button>
+              </Link>
             ) : (
               <ItemCount
                 stock={item.stock}

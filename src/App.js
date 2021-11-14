@@ -1,9 +1,10 @@
 import "./index.css";
-import NavBar from "./components/NavBar/NavBar.jsx";
-import ItemListContainer from "./containers/ItemListContainer/ItemListContainer.jsx";
-import ItemDetailContainer from "./containers/ItemDetailContainer/ItemDetailContainer";
+import NavBar from "./components/NavBar/index";
+import ItemListContainer from "./containers/ItemListContainer/index";
+import ItemDetailContainer from "./containers/ItemDetailContainer/index";
+import Cart from "./components/Cart/index";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider } from "./context/index";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer />
+            </Route>
+            <Route exact path="/cart">
+              <Cart />
             </Route>
           </Switch>
         </div>

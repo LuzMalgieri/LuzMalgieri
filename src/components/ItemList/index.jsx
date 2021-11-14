@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "../Item/Item";
+import Item from "../Item/index";
 
 const ItemList = ({ items }) => {
   return (
@@ -11,6 +11,7 @@ const ItemList = ({ items }) => {
               title={item.title}
               price={item.price}
               pictureUrl={item.pictureUrl}
+              key={item.id}
             />
           ))
         : "Loading.."}

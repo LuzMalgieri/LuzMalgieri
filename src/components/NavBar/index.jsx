@@ -1,14 +1,14 @@
 import React from "react";
 import "../../attributes/styles/NavBar.css";
 import MainLogo from "../../attributes/img/logo-store.png";
-import CartWidget from "../CartWidget/CartWidget";
+import CartWidget from "../CartWidget/index";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const menu = [
-    { name: "Fiction", ref: "/category/fiction" },
-    { name: "Non-Fiction", ref: "/category/non-fiction" },
-    { name: "FAQ", ref: "/" },
+    { name: "Fiction", ref: "/category/fiction", id:"1" },
+    { name: "Non-Fiction", ref: "/category/non-fiction", id:"2" },
+    { name: "FAQ", ref: "/", id:"3" },
   ];
 
   return (
@@ -19,10 +19,10 @@ const NavBar = () => {
             <img src={MainLogo} alt="store" />
           </Link>
         </li>
-        {menu.map((item) => {
+        {menu.map((menuItem) => {
           return (
-            <li className="menuItem">
-              <Link to={item.ref}>{item.name}</Link>
+            <li key={menuItem.id} className="menuItem">
+              <Link to={menuItem.ref}>{menuItem.name}</Link>
             </li>
           );
         })}
