@@ -1,16 +1,16 @@
-import * as firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB7S_Fyxmp1C7ZUJU430PydfDI0EsaLVLA",
-  authDomain: "moles-ecommerce.firebaseapp.com",
-  projectId: "moles-ecommerce",
-  storageBucket: "moles-ecommerce.appspot.com",
-  messagingSenderId: "850435110368",
-  appId: "1:850435110368:web:4324547d9f4886cbdd6785"
+  apiKey: "AIzaSyCnRsswWuulsec_PUHpRRXyDT9pu619T5U",
+  authDomain: "ecommerce-malgieri.firebaseapp.com",
+  projectId: "ecommerce-malgieri",
+  storageBucket: "ecommerce-malgieri.appspot.com",
+  messagingSenderId: "40145777059",
+  appId: "1:40145777059:web:c95276ee1d743a1df72a16",
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 export const getFirebase = () => app;
 

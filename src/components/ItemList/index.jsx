@@ -12,6 +12,7 @@ const ItemList = ({ items }) => {
               price={item.price}
               pictureUrl={item.pictureUrl}
               key={item.id}
+
             />
           ))
         : "Loading.."}
