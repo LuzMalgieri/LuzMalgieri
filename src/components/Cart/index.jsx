@@ -2,6 +2,7 @@ import React from "react";
 import "../../attributes/styles/Cart.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context";
+import CheckoutForm  from "../CheckoutForm/index";
 
 const Cart = () => {
   const { cart, removeItem, total, clearCart } = useCart();
@@ -68,10 +69,7 @@ const Cart = () => {
             </li>
           </ul>
         </div>
-
-        <div className="checkout">
-          <button className="noItemsBtn">Check Out</button>
-        </div>
+        <CheckoutForm/>
         <div className="checkout">
           <button className="noItemsBtn" onClick={() => clearCart()}>
             Clear Cart

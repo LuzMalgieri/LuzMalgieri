@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import CheckoutFinal from "../components/CheckoutFinal";
 
 const CartContext = createContext();
 
@@ -37,9 +38,12 @@ export const CartProvider = ({ children }) => {
     setTotal(0);
   };
 
+  const checkoutComplete = (name,id) => {    
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, addItem, isInCart, clearCart, removeItem, total }}
+      value={{ cart, addItem, isInCart, clearCart, removeItem, total, checkoutComplete }}
     >
       {children}
     </CartContext.Provider>
