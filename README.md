@@ -8,5 +8,5 @@ Para el aprendizaje de React y sus diferentes elementos, el proyecto consta de u
 Firebase @9.4.1 --> Firebase/Firestore: usada para el almacenamiento.  
 Sweetalert @11.3.0 --> Sweetalert: usada para alertas.
 
-[](https://github.com/LuzMalgieri/ecommerce-malgieri/blob/main/public/entregafinal1.gif)
+![Entrega final](https://github.com/LuzMalgieri/ecommerce-malgieri/blob/main/public/entregafinal1.gif)
 
