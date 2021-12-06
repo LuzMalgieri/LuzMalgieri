@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../attributes/styles/ItemDetail.css";
 import ItemCount from "../ItemCount/index";
-import { useCart } from "../../context";
+import NotFound from "../NotFound/index"
+import { useCart } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
@@ -12,7 +13,7 @@ const ItemDetail = ({ item }) => {
     setQuantityState(addOn);
     addItem(item, addOn);
   };
-
+  if (item !== undefined){
   return (
     <>
       <section className="detailBody">
@@ -43,7 +44,11 @@ const ItemDetail = ({ item }) => {
         </div>
       </section>
     </>
-  );
+  );}else{
+    return(
+      <NotFound/>
+    )
+  }
 };
 
 export default ItemDetail;

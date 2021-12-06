@@ -26,7 +26,6 @@ const NavBar = () => {
             </li>
           );
         })}
-
         <CartWidget />
         <li className="toggle">
           <span className="bars"></span>

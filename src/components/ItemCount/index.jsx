@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../attributes/styles/ItemCount.css";
 
-//const ItemCount = ({ stock, initial, onSubstract, onAdd, availableStock, counter }) => {
 const ItemCount = ({ stock, initial, addToCart }) => {
   const [counter, setCounter] = useState(1);
 
@@ -23,18 +22,16 @@ const ItemCount = ({ stock, initial, addToCart }) => {
         <button className="lessItem" onClick={onSubstract}>
           -
         </button>
-        {/* <input className="valueItem" value={counter} /> */}
         <p className="valueItem">{counter}</p>
         <button className="plusItem" onClick={onAdd}>
           +
         </button>
-       
       </div>
       <div className="buttonCart">
-      <button className="addToCart" onClick={() => addToCart(counter)}>
+        <button className="addToCart" onClick={() => addToCart(counter)}>
           ADD TO CART
         </button>
-        </div>
+      </div>
     </div>
   );
 };

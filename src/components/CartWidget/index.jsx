@@ -1,6 +1,6 @@
 import React from "react";
 import CartIcon from "../../attributes/img/shopping-cart.png";
-import { useCart } from "../../context/index";
+import { useCart } from "../../context/CartContext/index";
 import { Link } from "react-router-dom";
 
 const CartWidget = () => {

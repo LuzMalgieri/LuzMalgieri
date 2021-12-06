@@ -1,7 +1,6 @@
 .itemCountContainer {
   font-family: "Montserrat", sans-serif;
   width: auto;
-  background-color: #f8defa;
   margin: 1rem;
 }
 
@@ -28,7 +27,7 @@
   width: 2rem;
   border-radius: 5px;
   text-align: center;
-  margin: 1rem
+  margin: 1rem;
 }
 
 .valueItem {
@@ -44,6 +43,6 @@
   align-items: center;
 }
 
-.buttonCart{
+.buttonCart {
   text-align: center;
 }

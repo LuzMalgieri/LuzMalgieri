@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 a {
   text-decoration: none;
   color: #964376;
@@ -22,6 +20,11 @@ a:hover {
     color: #ffffff;
     transition: all 0.25s linear;
     cursor: pointer;
+  }
+
+  .titleSect{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
   }
 
 .noItemsBtn::after {
@@ -102,7 +105,11 @@ header .count {
   overflow: auto;
   width: 100%;
 }
-
+.row2 {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
 .col,
 .quantity,
 .remove {

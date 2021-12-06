@@ -4,9 +4,8 @@ import ItemListContainer from "./containers/ItemListContainer/index";
 import ItemDetailContainer from "./containers/ItemDetailContainer/index";
 import Cart from "./components/Cart/index";
 import NotFound from "./components/NotFound";
-import CheckoutFinal from "./components/CheckoutFinal";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { CartProvider } from "./context/index";
+import { CartProvider } from "./context/CartContext/index";
 
 function App() {
   return (
@@ -18,14 +17,11 @@ function App() {
             <Route exact path={["/", "/category/:id"]}>
               <ItemListContainer />
             </Route>
-            <Route path="/item/:id">
+            <Route exact path="/item/:id">
               <ItemDetailContainer />
             </Route>
             <Route exact path="/cart">
               <Cart />
-            </Route>
-            <Route exact path="/checkout">
-              <CheckoutFinal />
             </Route>
             <Route path="*">
               <NotFound />
